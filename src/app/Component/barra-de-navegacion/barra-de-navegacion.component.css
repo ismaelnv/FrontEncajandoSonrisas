@@ -40,7 +40,7 @@
 
 .navbar {
     height: 70px; /* Altura fija de 60px (ajusta según tus necesidades) */
-    background-color: #7d7d7dec;
+    background-color: #dad8d8;
 }
 
 .barra{
@@ -52,14 +52,15 @@
 .btnSonrisa{
 
     position: relative;
-    right: 1050px;
-    width: 180px; /* Ancho personalizado */
-    height: 40px; /* Alto personalizado */
+    right: 1300px;
+    width: 190px; /* Ancho personalizado */
+    height: 38px; /* Alto personalizado */
     border-radius: 30px;
     font-weight: bold;
     color: rgb(255, 217, 0);
     background-color: cornflowerblue;
     border: 2px solid  btn-info;
+    font-size: 18px;
 }
 
 .buscador form input.busca {
@@ -74,4 +75,10 @@
     padding-left: 15px; /* Espacio a la izquierda para el icono */
     border: 1px solid transparent; /* Borde transparente */
     outline: none; /* Quitar el borde al enfocar */
+}
+
+.categoria{
+
+    position: relative;
+    right: 750px;    
 }
