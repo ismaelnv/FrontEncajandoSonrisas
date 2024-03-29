@@ -1,0 +1,56 @@
+h2{
+    font-weight: bold;
+}
+
+.logeo{
+    padding-top: 100px;
+    margin-bottom: 20px;
+}
+
+.registrar{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-logeo{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-logeo button{
+    width: 80%;
+    border-radius: 30px;
+    background: rgb(24, 159, 12);
+}
+
+.usuario{
+    position: relative;
+    
+}
+
+.icon{
+    position: absolute;
+    top:1px;
+    left: 7px;
+    font-size: 22px;
+    color: #aaa
+}
+
+.usuario .form-control{
+    left: 10px;
+    padding-left: 40px;
+   
+}
+
+#usuario::placeholder{
+    color: #aaa;
+}
+
+#contrasena::placeholder{
+    color: #aaa;
+}
+
+.logo-principal{
+    font-size: 100px;
+    color: #1DA3DD;
+}
