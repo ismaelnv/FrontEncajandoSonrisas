@@ -1,7 +1,7 @@
 
 <div class="logeo container">  
   <!-- Modal -->
-  <div class="modal modal-dialog container" id="staticBackdrop" data-bs-backdrop="mostrarModal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal modal-dialog container" *ngIf="mostrarModal" id="staticBackdrop" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -27,11 +27,14 @@
                             <i class=" icon bi bi-lock-fill fa-lg"></i>
                             <input [ngClass]="{'is-invalid': hasErrors('contrasena','required') || hasErrors('contrasena','minlength')}" type="password" class="form-control" id="contrasena" placeholder="Contraseña" formControlName="contrasena">
                             <div class="text-danger" *ngIf="hasErrors('contrasena', 'required')">Contraseña requerido.</div>
-                            <div class="text-danger" *ngIf="hasErrors('contrasena', 'minlength')">Contraseña requiere minimo 8 caracteres </div>
+                            <div class="text-danger" *ngIf="hasErrors('contrasena', 'minlength')">Contraseña requiere minimo 6 caracteres </div>
                         </div>
                     </div>
                     <div class="btn-logeo" >
-                        <button type="submit" class="btn btn-success " (click)="iniciarSesion()" data-bs-dismiss="modal">Iniciar Sesión</button>
+                        <button type="submit" class="btn btn-success " (click)="iniciarSesion()" >Iniciar Sesión</button>
+                    </div>
+                    <div *ngIf="mostrarError" class="alert alert-warning" role="alert">
+                        Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.
                     </div>
                 </form>
             </div>
