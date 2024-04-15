@@ -1,12 +1,7 @@
 
-<div class="logeo container">
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Iniciar Sesion
-  </button>
-  
+<div class="logeo container">  
   <!-- Modal -->
-  <div class="modal modal-dialog container" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal modal-dialog container" id="staticBackdrop" data-bs-backdrop="mostrarModal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -36,7 +31,7 @@
                         </div>
                     </div>
                     <div class="btn-logeo" >
-                        <button type="submit" class="btn btn-success ">Iniciar Sesión</button>
+                        <button type="submit" class="btn btn-success " (click)="iniciarSesion()" data-bs-dismiss="modal">Iniciar Sesión</button>
                     </div>
                 </form>
             </div>

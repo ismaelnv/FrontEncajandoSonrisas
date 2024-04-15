@@ -1,28 +1,34 @@
-<!-- As a link -->
-<div class="barra ">
+<div class="barra">
 
-    <nav class="navbar">
-        <div class="container-fluid">
-          <label for="" class="saludar">Hola</label>
-          <label for="" class="iniciar">Iniciar sesion</label>
-    
-          <div class="buscador">
-    
-            <form class="d-flex" role="search">
-                <input class=" busca lupa" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
-            </form>
-          </div>
-
-          <div class="categoria">
-
-            <app-categoria></app-categoria>
-          </div>
-    
+  <nav class="navbar ">
+      <div class="container-fluid d-flex justify-content-around align-items-center">
+      
           <button class="btn btnSonrisa" type="button">Encajando Sonrisas</button>
-    
-          <img class="carrito" src="../../../assets/Imagenes/carrito.png"><img>
-          <img class="user" src="../../../assets/Imagenes/user.png" >
-        </div>
-    </nav>
+          
+          <div class="categoria">
+              <app-categoria></app-categoria>
+          </div>
+          
+          <div class="buscador">
+              <form class="d-flex" role="search">
+                  <input class="busca lupa" type="search" placeholder="¿Qué estás buscando?" aria-label="Search">
+              </form>
+          </div>
+          
+          <div class="d-flex align-items-center">
+              <img class="carrito" src="../../../assets/Imagenes/carrito.png" alt="Carrito">
+              
+          </div>
+          
+          <div class="d-flex logear">
+            <label for="" class="saludar" (click)="abrirModal()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Hola</label>
+            <label for="" class="iniciar" (click)="abrirModal()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Iniciar sesión</label>
+              
+          </div>
+          <div class="user">
+            <img class="userimg" src="../../../assets/Imagenes/user.png" alt="Usuario" (click)="abrirModal()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          </div>
+          
+      </div>
+  </nav>
 </div>
-

@@ -1,84 +1,67 @@
-
-.buscador{
-    
-    margin-left: 690px;
-}
 .saludar{
-
-    
-    position: relative;
-    right: 550px;
-    position: absolute;
-    top: 15px; 
     font-weight: bold;
     font-size: 20px;
-    color: cornflowerblue
+    color: cornflowerblue;
+    margin-bottom: 5px;
+    cursor: pointer;
 }
+
 .iniciar{
-
-    position: relative; /* Opción: relative o absolute según tu diseño */
-    top: 40px; 
-    position: absolute;
-    right: 550px;
     font-size: 13px;
-    color:cornflowerblue
+    color: cornflowerblue;
+    cursor: pointer;
 }
-.user{
 
-    position: absolute;
-    right: 480px;
+.userimg{
     width: 50px;
     height: 50px;
+    cursor: pointer;
+
 }
 
+
 .carrito{
-    position: absolute;
-    right: 650px;
     width: 40px;
     height: 40px;
 }
 
 .navbar {
-    height: 70px; /* Altura fija de 60px (ajusta según tus necesidades) */
+    height: 70px;
     background-color: #dad8d8;
 }
 
 .barra{
-
     position: fixed;
     width: 100%;
 }
 
 .btnSonrisa{
-
-    position: relative;
-    right: 1300px;
-    width: 190px; /* Ancho personalizado */
-    height: 38px; /* Alto personalizado */
+    width: 190px;
+    height: 38px;
     border-radius: 30px;
     font-weight: bold;
     color: rgb(255, 217, 0);
     background-color: cornflowerblue;
-    border: 2px solid  btn-info;
+    border: 2px solid btn-info;
     font-size: 18px;
 }
 
 .buscador form input.busca {
-
-    width: 450px; /* Ancho personalizado */
-    height: 35px; /* Alto personalizado */
+    width: 450px;
+    height: 35px;
     border-radius: 20px;
-    background-image: url('../../../assets/Imagenes/lupa.png'); /*ruta del icono*/
-    background-repeat: no-repeat; /*evitar que el icono se repita */
-    background-position: 420px center; /*para tener centrado el icono*/
-    background-size: 20px; /* Tamaño del icono */
-    padding-left: 15px; /* Espacio a la izquierda para el icono */
-    border: 1px solid transparent; /* Borde transparente */
-    outline: none; /* Quitar el borde al enfocar */
+    background-image: url('../../../assets/Imagenes/lupa.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px;
+    padding-left: 15px;
+    border: 1px solid transparent;
+    outline: none;
 }
 
-.categoria{
-
-    position: relative;
-    right: 750px;    
-}
+.logear {
+    display: flex;
+    flex-direction: column; /* Apilar los elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+    
+  }
