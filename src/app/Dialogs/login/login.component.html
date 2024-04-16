@@ -1,7 +1,7 @@
 
 <div class="logeo container">  
   <!-- Modal -->
-  <div class="modal modal-dialog container" *ngIf="mostrarModal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal modal-dialog container" *ngIf="mostrarModal" id="staticBackdrop" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="btn-logeo" >
-                        <button type="submit" class="btn btn-success " (click)="iniciarSesion()" data-bs-dismiss="modal" >Iniciar Sesión</button>
+                        <button type="submit" class="btn btn-success " (click)="iniciarSesion()" >Iniciar Sesión</button>
                     </div>
                     <div *ngIf="mostrarError" class="alert alert-warning" role="alert">
                         Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.
