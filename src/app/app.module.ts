@@ -8,19 +8,29 @@ import { CategoriaComponent } from './Component/categoria/categoria.component';
 import { LoginComponent } from './Dialogs/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CarouselComponent, CarouselModule } from 'ngx-owl-carousel-o';
+import { CaruselCardsComponent } from './Component/carusel-cards/carusel-cards.component';
+import { ListCardsComponent } from './Component/list-cards/list-cards.component';
+import { PaginaCategoriaComponent } from './Paginas/pagina-categoria/pagina-categoria.component';
+import { PaginaHomeComponent } from './Paginas/pagina-home/pagina-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BarraDeNavegacionComponent,
     CategoriaComponent,
-    LoginComponent
+    LoginComponent,
+    CaruselCardsComponent,
+    ListCardsComponent,
+    PaginaCategoriaComponent,
+    PaginaHomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

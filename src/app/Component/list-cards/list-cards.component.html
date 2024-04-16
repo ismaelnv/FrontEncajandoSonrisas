@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row row-cols-5">
+      <div class="col" *ngFor="let item of lista">
+        <div class="card">
+            <div class="img-wrapper">
+                <img [src] = "item.imagen" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">{{item.titulo}}</h5>
+                <p class="card-text">{{item.precio}}</p>
+                <a href="#" class="btn btn-primary">Ver Producto</a>
+              </div>
+            </div>
+      </div>
+    </div>
+</div>
+
+
