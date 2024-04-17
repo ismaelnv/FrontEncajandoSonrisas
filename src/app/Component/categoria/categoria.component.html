@@ -1,11 +1,18 @@
 <button class="btn btnCategorias" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">CATEGORIAS</button>
 
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+<div class="offcanvas offcanvas-start principal" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel"></h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <p>Try scrolling the rest of the page to see this option in action.</p>
+    <div class="container d-flex justify-content-center logo">
+      <label for="" >Encajando Sonrisas</label>
+    </div>
+    <div class="container lista-categorias">
+      <ul class="categorias">
+        <li class="tipo" *ngFor="let cat of listaCategorias" [ngClass]="['fondo-blanco', 'letras-verdes']">{{ cat.nombre }}</li>
+      </ul>
+    </div>
   </div>
 </div>

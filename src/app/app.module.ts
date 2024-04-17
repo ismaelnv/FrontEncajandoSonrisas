@@ -14,6 +14,7 @@ import { ListCardsComponent } from './Component/list-cards/list-cards.component'
 import { PaginaCategoriaComponent } from './Paginas/pagina-categoria/pagina-categoria.component';
 import { PaginaHomeComponent } from './Paginas/pagina-home/pagina-home.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

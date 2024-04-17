@@ -14,3 +14,54 @@
     font-size: 19px;
     color: rgb(123, 121, 121);
 }
+
+.logo{
+    width: 190px;
+    height: 38px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: #00A160;
+    background-color: yellow;
+    border: 2px solid btn-info;
+    font-size: 18px;
+}
+
+.principal{
+    background: #00A160;
+}
+
+.offcanvas-body{
+    padding: 0;
+    
+}
+.btn-close-white{
+    font-weight: bold;
+}
+
+.categorias {
+    list-style-type: none; /* Elimina el punto de la lista */
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+
+  .lista-categorias{
+    padding: 0;
+  }
+  
+  .tipo {
+    color: white; /* Color de letra predeterminado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para los cambios */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 8px; /* Espaciado interno para el texto */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    border: 1px solid transparent; 
+  }
+  
+  /* Estilos al interactuar con los elementos */
+  .tipo:hover, .tipo:focus {
+    background-color: white; /* Cambia el fondo al hacer hover o focus */
+    color: green; /* Cambia el color de la letra al hacer hover o focus */
+  }
