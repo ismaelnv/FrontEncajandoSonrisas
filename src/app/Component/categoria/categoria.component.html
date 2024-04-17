@@ -11,7 +11,7 @@
     </div>
     <div class="container lista-categorias">
       <ul class="categorias">
-        <li class="tipo" *ngFor="let cat of listaCategorias" [ngClass]="['fondo-blanco', 'letras-verdes']">{{ cat.nombre }}</li>
+        <li class="tipo" *ngFor="let cat of listaCategorias" routerLink="categoria" data-bs-dismiss="offcanvas">{{ cat.nombre }}</li>
       </ul>
     </div>
   </div>

@@ -22,6 +22,7 @@ export class CategoriaComponent implements OnInit{
 
     this._categoriaService.obtenerCategorias().subscribe((data:ITipoProducto[])=>{
       this.listaCategorias = data;
+      console.log(this.listaCategorias);
     })
   }
 

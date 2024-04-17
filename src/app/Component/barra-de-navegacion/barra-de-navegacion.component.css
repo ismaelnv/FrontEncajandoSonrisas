@@ -1,28 +1,29 @@
 .saludar{
     font-weight: bold;
     font-size: 20px;
-    color: cornflowerblue;
+    color: #00A160;
     margin-bottom: 5px;
     cursor: pointer;
 }
 
 .iniciar{
     font-size: 13px;
-    color: cornflowerblue;
+    color: #00A160;
     cursor: pointer;
 }
 
 .userimg{
-    width: 50px;
-    height: 50px;
+    font-size: 38px;
     cursor: pointer;
-
+    color: gray;
+    
 }
 
-
 .carrito{
-    width: 40px;
-    height: 40px;
+    font-size: 38px;
+    color: #00A160;
+    cursor: pointer;
+
 }
 
 .navbar {
@@ -42,8 +43,8 @@
     height: 38px;
     border-radius: 30px;
     font-weight: bold;
-    color: rgb(255, 217, 0);
-    background-color: cornflowerblue;
+    color: #00A160;
+    background-color: yellow;
     border: 2px solid btn-info;
     font-size: 18px;
 }
