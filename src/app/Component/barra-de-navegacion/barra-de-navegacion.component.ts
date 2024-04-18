@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { LoginComponent } from 'src/app/Dialogs/login/login.component';
 
 @Component({
   selector: 'app-barra-de-navegacion',
@@ -8,9 +7,4 @@ import { LoginComponent } from 'src/app/Dialogs/login/login.component';
 })
 export class BarraDeNavegacionComponent {
 
-  mostrarModal = false;
-
-  abrirModal() {
-    this.mostrarModal = true;
-  }
 }

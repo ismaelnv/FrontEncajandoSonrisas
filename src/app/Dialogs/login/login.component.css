@@ -3,6 +3,7 @@ h2{
 }
 
 .logeo{
+
     padding-top: 100px;
     margin-bottom: 20px;
 }
@@ -54,3 +55,17 @@ h2{
     font-size: 100px;
     color: #1DA3DD;
 }
+
+.modal {
+    
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}    
+
+.form-container{
+
+    width: 400px;
+}
+

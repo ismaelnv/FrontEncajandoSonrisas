@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { flatMap } from 'rxjs';
 import { IPersona } from 'src/app/Modelo/persona.modelo';
 import { PersonaService } from 'src/app/Service/persona.service';
 
@@ -9,12 +8,13 @@ import { PersonaService } from 'src/app/Service/persona.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent{
 
-  //mostrarModal:any = "false";
   listaPersonas:IPersona[] = [];
   mostrarError?:boolean ;
   mostrarModal?:boolean;
+  
+  @ViewChild('modalLogin') modal!: ElementRef;
 
   formLogin:FormGroup
 
@@ -27,11 +27,7 @@ export class LoginComponent implements OnInit{
       contrasena: ['',[Validators.required, Validators.minLength(6)]]
     })
   }
-  ngOnInit(): void {
-    this.mostrarError = false;
-    this.mostrarModal = true;
-  }
-
+  
   hasErrors( controlName: string, errorType:string){
     return this.formLogin.get(controlName)?.hasError(errorType) && this.formLogin.get(controlName)?.touched
   }
@@ -49,8 +45,8 @@ export class LoginComponent implements OnInit{
 
       data.forEach((per)=>{
         if(per.correo === usuario && per.password === contrasena){
-          console.log("persona correcta")
-          this.mostrarModal = false;
+          console.log("persona correcta");
+          (document.getElementById('modalLogin')?.querySelector(".btn-close") as any)?.click();
         }
       })
       

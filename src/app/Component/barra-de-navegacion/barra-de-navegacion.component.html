@@ -2,8 +2,8 @@
 
   <nav class="navbar ">
       <div class="container-fluid d-flex justify-content-around align-items-center">
-      
-          <button class="btn btnSonrisa" type="button">Encajando Sonrisas</button>
+
+          <a href="" class="btnSonrisa"><strong class="encajando">Encajando</strong>.sonrisas</a>
           
           <div class="categoria">
               <app-categoria></app-categoria>
@@ -21,12 +21,12 @@
           </div>
           
           <div class="d-flex logear">
-            <label for="" class="saludar" (click)="abrirModal()" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Hola</label>
-            <label for="" class="iniciar" (click)="abrirModal()" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Iniciar sesión</label>
+            <label for="" class="saludar"  data-bs-toggle="modal" data-bs-target="#modalLogin" >Hola</label>
+            <label for="" class="iniciar"  data-bs-toggle="modal" data-bs-target="#modalLogin" >Iniciar sesión</label>
               
           </div>
           <div class="user">
-            <i class="bi bi-person-circle userimg" (click)="abrirModal()" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></i>
+            <i class="bi bi-person-circle userimg" alt="Usuario" data-bs-toggle="modal" data-bs-target="#modalLogin"></i>
           </div>
           
       </div>

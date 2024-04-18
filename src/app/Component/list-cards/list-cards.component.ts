@@ -1,5 +1,8 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { ICard } from 'src/app/Modelo/cards.modelo';
+import { IProducto } from 'src/app/Modelo/producto.modelo';
+import { ProductoService } from 'src/app/Service/producto.service';
 
 @Component({
   selector: 'app-list-cards',
@@ -9,6 +12,8 @@ import { ICard } from 'src/app/Modelo/cards.modelo';
 export class ListCardsComponent {
 
   @Input()
-  lista: ICard[] = [];
+  lista: IProducto[] = [];
+  rutaStatica: string = "http://localhost:8080/imagenes/";
 
+  constructor(private router:Router, private _serviceProducto:ProductoService){}
 }

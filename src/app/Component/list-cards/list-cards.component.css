@@ -1,8 +1,38 @@
 .img-wrapper img{
 
     width: 100%;
+    
 }
 .row .col{
 
     margin-bottom: 20px;
+}
+
+.card{
+
+    width: 240px;
+    height: 340px;  
+}
+
+.img-wrapper{
+
+    height: 190px;
+}
+.btn{
+   
+    width: 210px;
+    font-weight: bold;
+    background-color: #00A160;
+    color: floralwhite;
+}
+
+.card-precio{
+
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.card-nombre{
+
+    font-size: 15px;
 }

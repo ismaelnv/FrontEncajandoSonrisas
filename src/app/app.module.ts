@@ -13,6 +13,7 @@ import { CaruselCardsComponent } from './Component/carusel-cards/carusel-cards.c
 import { ListCardsComponent } from './Component/list-cards/list-cards.component';
 import { PaginaCategoriaComponent } from './Paginas/pagina-categoria/pagina-categoria.component';
 import { PaginaHomeComponent } from './Paginas/pagina-home/pagina-home.component';
+import { ProductoComponent } from './Paginas/producto/producto.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { PaginaHomeComponent } from './Paginas/pagina-home/pagina-home.component
     CaruselCardsComponent,
     ListCardsComponent,
     PaginaCategoriaComponent,
-    PaginaHomeComponent
+    PaginaHomeComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,

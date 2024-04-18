@@ -1,18 +1,19 @@
-.btnCategorias{
 
-    border: none;
-    outline: none;
-    /* Eliminar fondo */
-    background-color: transparent;
-    /* Estilos de texto */
-    color: inherit; /* Utiliza el color de texto heredado */
-    cursor: pointer; /* Cambiar cursor a apuntador al pasar el ratón */
-    /* Opcional: ajustar otros estilos de texto según necesidades */
-    font-size: inherit;
-    font-weight: inherit;
-    font-weight: bold;
-    font-size: 19px;
-    color: rgb(123, 121, 121);
+.btnSonrisa{
+  font-size: inherit;
+  font-weight: inherit;
+  font-weight: bold;
+  
+  border-radius: 30px;
+  font-weight: bold;
+  color: #00A160;
+  background-color: yellow;
+  border: 2px solid btn-info;
+  font-size: 19px;
+  display: flex;
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center;
+  text-decoration: none;
 }
 
 .logo{
