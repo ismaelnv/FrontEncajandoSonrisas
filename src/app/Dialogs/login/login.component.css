@@ -2,6 +2,11 @@ h2{
     font-weight: bold;
 }
 
+.modal-body{
+    display: flex;
+    justify-content: center;
+}
+
 .logeo{
 
     padding-top: 100px;

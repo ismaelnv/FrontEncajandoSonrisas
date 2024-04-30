@@ -15,5 +15,4 @@ export class ListCardsComponent {
   lista: IProducto[] = [];
   rutaStatica: string = "http://localhost:8080/imagenes/";
 
-  constructor(private router:Router, private _serviceProducto:ProductoService){}
 }

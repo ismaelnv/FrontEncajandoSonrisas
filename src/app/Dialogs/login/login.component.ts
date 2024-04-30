@@ -1,5 +1,7 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { MdbModalRef } from 'mdb-angular-ui-kit/modal';
 import { IPersona } from 'src/app/Modelo/persona.modelo';
 import { PersonaService } from 'src/app/Service/persona.service';
 
@@ -11,16 +13,16 @@ import { PersonaService } from 'src/app/Service/persona.service';
 export class LoginComponent{
 
   listaPersonas:IPersona[] = [];
-  mostrarError?:boolean ;
-  mostrarModal?:boolean;
-  
-  @ViewChild('modalLogin') modal!: ElementRef;
+  mostrarError?:boolean ;  
 
   formLogin:FormGroup
 
+
   constructor(
     private form:FormBuilder,
-    private _personaService: PersonaService
+    private _personaService: PersonaService,
+    private router:Router,
+    private modalRef: MdbModalRef<LoginComponent>
     ){
     this.formLogin = this.form.group({
       usuario: ['',[Validators.email, Validators.required]],
@@ -36,7 +38,12 @@ export class LoginComponent{
     console.log(this.formLogin)
   }
 
-  iniciarSesion(){
+  close(): void {
+    const closeMessage = 'Modal closed';
+    this.modalRef.close(closeMessage)
+  }
+
+  iniciarSesion(): void {
     const usuario = this.formLogin.get('usuario')?.value;
     const contrasena = this.formLogin.get('contrasena')?.value;
 
@@ -46,13 +53,17 @@ export class LoginComponent{
       data.forEach((per)=>{
         if(per.correo === usuario && per.password === contrasena){
           console.log("persona correcta");
-          (document.getElementById('modalLogin')?.querySelector(".btn-close") as any)?.click();
+          this.router.navigateByUrl("/categoria")
+          const closeMessage = 'Modal closed';
+          this.modalRef.close(closeMessage);
+
+            
         }
       })
       
     })
     this.mostrarError = true;
     console.log("Usuario Invalido")
-
   }
+
 }

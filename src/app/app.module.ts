@@ -14,6 +14,8 @@ import { ListCardsComponent } from './Component/list-cards/list-cards.component'
 import { PaginaCategoriaComponent } from './Paginas/pagina-categoria/pagina-categoria.component';
 import { PaginaHomeComponent } from './Paginas/pagina-home/pagina-home.component';
 import { ProductoComponent } from './Paginas/producto/producto.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MdbModalModule, MdbModalService } from 'mdb-angular-ui-kit/modal';
 
 
 @NgModule({
@@ -33,9 +35,11 @@ import { ProductoComponent } from './Paginas/producto/producto.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CarouselModule
+    CarouselModule,
+    NoopAnimationsModule,
+    MdbModalModule
   ],
-  providers: [],
+  providers: [MdbModalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

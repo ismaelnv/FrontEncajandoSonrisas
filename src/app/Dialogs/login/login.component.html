@@ -1,48 +1,44 @@
-
-<div class="logeo container">  
-  <!-- Modal -->
-  <div class="modal modal-dialog container" id="modalLogin" data-bs-backdrop="static"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <div class="form-container">
-                <h2 class="text-center mb-4">Inicio de Sesión</h2>
-                <div class="col-6 offset-3 d-flex justify-content-center mt-5">
-                    <i class="bi bi-person-circle logo-principal"></i>
-                </div>
-                <form [formGroup]="formLogin" (ngSubmit)="enviar()" >
-                    <div class="col ">
-                        <div class=" mb-3 usuario">
-                            <i class=" icon bi bi-person-fill fa-lg"></i>  
-                            <input [ngClass]="{'is-invalid': hasErrors('usuario','required') || hasErrors('usuario','email')}" type="email" class="form-control" id="usuario" placeholder="Username" formControlName="usuario">
-                            <div class="text-danger" *ngIf="hasErrors('usuario', 'required')">Usuario requerido.</div>
-                            <div class="text-danger" *ngIf="hasErrors('usuario', 'email')">Usuario formato invalido </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class=" mb-3 usuario">
-                            <i class=" icon bi bi-lock-fill fa-lg"></i>
-                            <input [ngClass]="{'is-invalid': hasErrors('contrasena','required') || hasErrors('contrasena','minlength')}" type="password" class="form-control" id="contrasena" placeholder="Contraseña" formControlName="contrasena">
-                            <div class="text-danger" *ngIf="hasErrors('contrasena', 'required')">Contraseña requerido.</div>
-                            <div class="text-danger" *ngIf="hasErrors('contrasena', 'minlength')">Contraseña requiere minimo 6 caracteres </div>
-                        </div>
-                    </div>
-                    <div class="btn-logeo" >
-                        <button type="submit" class="btn btn-success " (click)="iniciarSesion()" >Iniciar Sesión</button>
-                    </div>
-                    <div *ngIf="mostrarError" class="alert alert-warning" role="alert">
-                        Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="modal-footer registrar">
-            <p class="text-center mt-3">¿No tienes cuenta? <a href="index2.html">Regístrate</a></p>
-        </div>
-      </div>
+<div class="modal-content">
+    <div class="modal-header">
+      
+      <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
     </div>
+    <div class="modal-body">
+        <div class="form-container">
+            <h2 class="text-center mb-4">Inicio de Sesión</h2>
+            <div class="col-6 offset-3 d-flex justify-content-center mt-5">
+                <i class="bi bi-person-circle logo-principal"></i>
+            </div>
+            <form [formGroup]="formLogin" (ngSubmit)="enviar()" >
+                <div class="col ">
+                    <div class=" mb-3 usuario">
+                        <i class=" icon bi bi-person-fill fa-lg"></i>  
+                        <input [ngClass]="{'is-invalid': hasErrors('usuario','required') || hasErrors('usuario','email')}" type="email" class="form-control" id="usuario" placeholder="Username" formControlName="usuario">
+                        <div class="text-danger" *ngIf="hasErrors('usuario', 'required')">Usuario requerido.</div>
+                        <div class="text-danger" *ngIf="hasErrors('usuario', 'email')">Usuario formato invalido </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class=" mb-3 usuario">
+                        <i class=" icon bi bi-lock-fill fa-lg"></i>
+                        <input [ngClass]="{'is-invalid': hasErrors('contrasena','required') || hasErrors('contrasena','minlength')}" type="password" class="form-control" id="contrasena" placeholder="Contraseña" formControlName="contrasena">
+                        <div class="text-danger" *ngIf="hasErrors('contrasena', 'required')">Contraseña requerido.</div>
+                        <div class="text-danger" *ngIf="hasErrors('contrasena', 'minlength')">Contraseña requiere minimo 6 caracteres </div>
+                    </div>
+                </div>
+                <div class="btn-logeo" >
+                    <button type="submit" class="btn btn-success "  (click)="iniciarSesion()" >Iniciar Sesión</button>
+                </div>
+                <div *ngIf="mostrarError" class="alert alert-warning" role="alert">
+                    Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal-footer">
+      <!-- <button type="button" class="btn btn-secondary" >
+        Close
+      </button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div> -->
   </div>
-</div>
