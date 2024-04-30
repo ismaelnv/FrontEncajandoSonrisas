@@ -1,8 +1,14 @@
+
+.producto{
+
+    padding-top: 100px;
+}
+
 .img-wrapper img{
 
     width: 100%;
-    
 }
+
 .row .col{
 
     margin-bottom: 20px;
@@ -10,29 +16,53 @@
 
 .card{
 
+    border: none;
     width: 240px;
-    height: 340px;  
+    height: 370px;
+    overflow: hidden;  
+   
 }
 
 .img-wrapper{
 
-    height: 190px;
+    height: 190px; 
 }
+
 .btn{
    
+    position: absolute;
+    top: 319px;
     width: 210px;
     font-weight: bold;
     background-color: #00A160;
     color: floralwhite;
 }
 
+.btn:hover{
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Aplica una sombra encima del botón */
+    background-color: #169260; /* Cambia el color de fondo con opacidad al pasar el mouse */
+}
+
+.btn:active {
+
+    color: floralwhite;
+    background-color: #75bda1;
+}
+
 .card-precio{
 
+    position: absolute;
+    top: 270px;
     font-weight: bold;
     font-size: 25px;
 }
 
 .card-nombre{
 
+    position: absolute;
+    top: 250px;
     font-size: 15px;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    
 }

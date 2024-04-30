@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container producto">
     <div class="row row-cols-5">
       <div class="col" *ngFor="let item of lista">
         <div class="card">
@@ -8,7 +8,8 @@
               <div class="card-body">
                 <h5 class="card-nombre">{{item.nombre_pro}}</h5>
                 <p class="card-precio">S/{{item.precio}}</p>
-                <a [routerLink]="['/producto/', item.cod_pro]" class="btn ">Ver Producto</a>
+                <a [routerLink]="['/producto/', item.cod_pro]" class="btn ">Ver Producto
+                </a>
               </div>
             </div>
       </div>

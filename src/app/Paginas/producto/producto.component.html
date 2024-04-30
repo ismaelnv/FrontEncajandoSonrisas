@@ -1,24 +1,23 @@
 
 
 <div class="card">
-    <div class="card-header">
-      Título del Card
-    </div>
+   
     <div class="card-body">
+
       <div class="row">
-        <div class="col">
-          <h5>Columna 1</h5>
-          <p>Contenido de la columna 1</p>
+        <div class="col img" *ngFor="let imagen of imagenes">
+          <img [src]="rutaStatica + imagen.nombre" alt="...">
         </div>
-        <div class="col">
-          <h5>Columna 2</h5>
+        
+        <div class="col description">
+          <h4 *ngIf="producto">{{producto.nombre_pro}}</h4>
           <div class="row">
             <div class="item">
               
               <div class="label-des vnomobile">
                 <span class="label"> 
+                  <h6>Caracteristicas principales:</h6>
                     <ul *ngIf="producto">
-                        <li>{{producto.nombre_pro}}</li>
                         <li>{{producto.descripcion}}</li>
                         <li>{{producto.material}}</li>
                         <li>{{producto.peso_pro}}</li>
@@ -30,9 +29,28 @@
             </div>
           </div>
           <div class="row">
+
             <div class="item">
-              Contenido de la segunda fila
+              <label class="precio" *ngIf="producto">S/{{producto.precio}} </label>
             </div>
+
+            <div class="btn-group" role="group">
+
+              <button (click) = "decremento()" type="button" class="btn">
+                -
+              </button>
+              <button type="button" class="btn btn-cantidad">
+                {{cantidadP}}
+              </button>
+              <button (click) = "incremento()" type="button" class="btn">
+                +
+              </button>
+            </div>
+
+            <a  class="btn btn-carrito">
+              <i class="carrito bi bi-cart4"></i>AGREGAR
+            </a>
+            
           </div>
          
         </div>

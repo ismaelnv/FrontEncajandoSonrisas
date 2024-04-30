@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { ICard } from 'src/app/Modelo/cards.modelo';
 import { IProducto } from 'src/app/Modelo/producto.modelo';
 import { ProductoService } from 'src/app/Service/producto.service';
 

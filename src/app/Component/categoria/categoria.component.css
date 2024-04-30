@@ -1,5 +1,20 @@
 
+.btnCategorias{
+    
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+  
+.btnCategorias:hover{
+
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
 .btnSonrisa{
+  
   font-size: inherit;
   font-weight: inherit;
   font-weight: bold;
@@ -45,13 +60,13 @@
     margin: 0;
     padding: 0;
     width: 100%; /* Ocupa todo el ancho disponible */
-  }
+}
 
-  .lista-categorias{
+.lista-categorias{
     padding: 0;
-  }
+}
   
-  .tipo {
+.tipo {
     color: white; /* Color de letra predeterminado */
     cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
     transition: background-color 0.3s, color 0.3s; /* Transición suave para los cambios */
@@ -59,10 +74,11 @@
     padding: 8px; /* Espaciado interno para el texto */
     box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
     border: 1px solid transparent; 
-  }
+}
   
   /* Estilos al interactuar con los elementos */
-  .tipo:hover, .tipo:focus {
+.tipo:hover, .tipo:focus {
     background-color: white; /* Cambia el fondo al hacer hover o focus */
     color: green; /* Cambia el color de la letra al hacer hover o focus */
-  }
+}
+
