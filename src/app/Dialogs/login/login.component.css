@@ -2,6 +2,12 @@ h2{
     font-weight: bold;
 }
 
+.modal-content{
+    position: absolute; /* Posición fija para mantener el modal en la pantalla */
+    top: 150px; /* Coloca el borde superior del modal en el centro vertical */
+
+}
+
 .modal-body{
     display: flex;
     justify-content: center;
