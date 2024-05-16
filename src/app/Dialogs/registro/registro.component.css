@@ -2,11 +2,6 @@ h2{
     font-weight: bold;
 }
 
-.modal-content{
-    position: absolute; /* Posición fija para mantener el modal en la pantalla */
-    top: 100px; /* Coloca el borde superior del modal en el centro vertical */
-
-}
 
 .modal-body{
     display: flex;
@@ -59,6 +54,7 @@ h2{
 .usuario .form-control{
     left: 10px;
     padding-left: 40px;
+
    
 }
 
@@ -70,18 +66,35 @@ h2{
     color: #aaa;
 }
 
+#dni::placeholder{
+    color: #aaa;
+}
+
+#nombres::placeholder{
+    color: #aaa;
+}
+
+#apellidos::placeholder{
+    color: #aaa;
+}
+
+#telefono::placeholder{
+    color: #aaa;
+}
+
+
 .logo-principal{
     font-size: 100px;
     color: #1DA3DD;
 }
 
-.modal {
+/* .modal {
     
     position: fixed;
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%); 
-}    
+}     */
 
 .form-container{
 
@@ -97,4 +110,12 @@ h2{
     color: #0783b8;
     font-weight: bold;
     cursor: pointer;
+}
+
+.form-label{
+    font-size: small;
+    font-weight: bold;
+}
+.asterisco{
+    color: red;
 }

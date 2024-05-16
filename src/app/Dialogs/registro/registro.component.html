@@ -1,0 +1,76 @@
+
+<div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-container">
+        <h2 class="text-center mb-4">Registro</h2>
+        <form [formGroup]="formRegistro" (ngSubmit)="enviar()" >
+          <div class="col ">
+                <div class=" mb-3 usuario">
+                    <i class=" icon bi bi-person-fill fa-lg"></i>  
+                    <input [ngClass]="{'is-invalid': hasErrors('usuario','required') || hasErrors('usuario','email')}" type="email" class="form-control" id="usuario" placeholder="Correo electronico" formControlName="usuario">
+                    <div class="text-danger" *ngIf="hasErrors('usuario', 'required')">Usuario requerido.</div>
+                    <div class="text-danger" *ngIf="hasErrors('usuario', 'email')">Usuario formato invalido </div>
+                </div>
+          </div>
+          <div class="col ">
+              <div class=" mb-3"> 
+                    <input [ngClass]="{'is-invalid': hasErrors('nombres','required')}" type="text" class="form-control" id="nombres" placeholder="Nombres" formControlName="nombres">
+                    <div class="text-danger" *ngIf="hasErrors('nombres', 'required')">Nombres requeridos.</div>
+              </div>
+          </div>
+          <div class="col ">  
+              <div class=" mb-3 "> 
+                  <input [ngClass]="{'is-invalid': hasErrors('apellidos','required')}" type="text" class="form-control" id="apellidos" placeholder="Apellidos" formControlName="apellidos">
+                  <div class="text-danger" *ngIf="hasErrors('apellidos', 'required')">Apellidos requeridos.</div>
+              </div>
+          </div>
+          <div class="col ">  
+              <div class=" mb-3 ">
+                <label for="fecnac" class="form-label">FECHA DE NACIMIENTO <span class="asterisco">*</span></label> 
+                <input [ngClass]="{'is-invalid': hasErrors('fecnac','required')}" type="date" class="form-control" id="fecnac" formControlName="fecnac">
+                <div class="text-danger" *ngIf="hasErrors('fecnac', 'required')">Fecha Nacimiento requerido.</div>
+              </div>
+          </div>
+          <div class="col ">  
+              <div class=" input-group mb-3">
+                <select class="form-select mb-3" >
+                  <option selected value="dni">DNI</option>
+                  <option value="pasaporte">Pasaporte</option>
+                  <option value="carnet">Carnet de Extranjeria</option>
+                </select>
+                <input [ngClass]="{'is-invalid': hasErrors('dni','pattern')}" type="text" class="form-control" id="dni" formControlName="dni" placeholder="Nro de Documento">
+                <div class="text-danger" *ngIf="hasErrors('fecnac', 'pattern')">Deben ser numeros.</div>
+              </div>
+          </div>
+          <div class="col ">  
+              <div class=" mb-3 "> 
+                <input [ngClass]="{'is-invalid': hasErrors('telefono','pattern')}" type="text" class="form-control" id="telefono" formControlName="telefono" placeholder="Numero de Telefono">
+                <div class="text-danger" *ngIf="hasErrors('telefono', 'pattern')">Telefono requerido.</div>
+              </div>
+          </div>
+          <div class="col">
+                <div class=" mb-3 usuario">
+                    <i class=" icon bi bi-lock-fill fa-lg"></i> 
+                    <i class="icon-password bi bi-eye-fill" (click)="mostrarPassword()"></i>
+                    <input [ngClass]="{'is-invalid': hasErrors('contrasena','required') || hasErrors('contrasena','minlength')}" 
+                    [type]="mostrarContrasena ? 'text' : 'password'" class="form-control" id="contrasena" placeholder="Contraseña" formControlName="contrasena">
+                    <div class="text-danger" *ngIf="hasErrors('contrasena', 'required')">Contraseña requerido.</div>
+                    <div class="text-danger" *ngIf="hasErrors('contrasena', 'minlength')">Contraseña requiere minimo 6 caracteres </div>
+                </div>
+          </div>
+          <div class="btn-logeo" >
+                <button type="submit" class="btn btn-success "  (click)="guardarPersona()" >Registrar</button>
+          </div>
+          <div *ngIf="mostrarError" class="alert alert-warning" role="alert">
+                Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.
+          </div>
+        </form>
+    </div>
+    </div>
+    <div class="modal-footer">
+      <p>¿Ya tienes Cuenta? <span (click)="openModal()">Iniciar Sesion</span></p>
+    </div>
+  </div>

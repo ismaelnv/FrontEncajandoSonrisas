@@ -23,7 +23,8 @@
                 <div class="col">
                     <div class=" mb-3 usuario">
                         <i class=" icon bi bi-lock-fill fa-lg"></i>
-                        <input [ngClass]="{'is-invalid': hasErrors('contrasena','required') || hasErrors('contrasena','minlength')}" type="password" class="form-control" id="contrasena" placeholder="Contraseña" formControlName="contrasena">
+                        <i class="icon-password bi bi-eye-fill" (click)="mostrarPassword()"></i>
+                        <input [ngClass]="{'is-invalid': hasErrors('contrasena','required') || hasErrors('contrasena','minlength')}" [type]="mostrarContrasena ? 'text' : 'password'" class="form-control" id="contrasena" placeholder="Contraseña" formControlName="contrasena">
                         <div class="text-danger" *ngIf="hasErrors('contrasena', 'required')">Contraseña requerido.</div>
                         <div class="text-danger" *ngIf="hasErrors('contrasena', 'minlength')">Contraseña requiere minimo 6 caracteres </div>
                     </div>
@@ -38,9 +39,6 @@
         </div>
     </div>
     <div class="modal-footer">
-      <!-- <button type="button" class="btn btn-secondary" >
-        Close
-      </button>
-      <button type="button" class="btn btn-primary">Save changes</button>
-    </div> -->
+        <p>¿No tiene Cuenta? <span (click)="openModal()">Registrarse</span></p>
+    </div>
   </div>
