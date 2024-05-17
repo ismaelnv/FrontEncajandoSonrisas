@@ -31,6 +31,7 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { ListCategoriaComponent } from './Component/list-categoria/list-categoria.component';
+import { RegistroComponent } from './Dialogs/registro/registro.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { ListCategoriaComponent } from './Component/list-categoria/list-categori
     PaginaCategoriaComponent,
     PaginaHomeComponent,
     ProductoComponent,
-    ListCategoriaComponent
+    ListCategoriaComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
