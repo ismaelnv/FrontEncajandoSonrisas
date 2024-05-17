@@ -25,11 +25,9 @@ export class ProductoComponent implements OnInit {
 
     this.productId = this.route.snapshot.paramMap.get('id');
     this.obtenerProductoId(Number(this.productId));
-    
   }
 
   public obtenerProductoId(id:number){
-    console.log("entrando al metodo"+id)
 
     this._serviceProducto.obtenerProductoId(id).subscribe((data:IProducto)=>{
     

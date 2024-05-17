@@ -11,6 +11,7 @@ export class PaginaHomeComponent implements OnInit {
  
 
   productos: IProducto[] = [];
+  cantidadProductos: number = 0;
 
   public constructor(private _serviceProducto: ProductoService){}
 
@@ -24,6 +25,13 @@ export class PaginaHomeComponent implements OnInit {
     this._serviceProducto.obtenerProductos().subscribe((data:IProducto[])=>{
     
       this.productos = data;
+      this.cantidadProductos = data.length;
+      this.setCantidadProducto(this.cantidadProductos);
     })
+  }
+
+  setCantidadProducto(cantidad:number){
+
+    this._serviceProducto.obtenerCantidadPorducto(cantidad);
   }
 }

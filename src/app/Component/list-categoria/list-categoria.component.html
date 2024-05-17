@@ -1,0 +1,32 @@
+<div class="container producto">
+    <div class="row row-cols-5">
+        <div class="col" *ngFor="let item of lista">
+            <div class="card">
+                <div class="img-wrapper">
+                    <img [src] ="rutaStatica + item.imagenes[0].nombre" alt="...">
+                </div>
+                <div class="card-body">
+
+                    <h5 class="card-nombre">{{item.nombre_pro}}</h5>
+                    <p class="card-precio">S/{{item.precio}}</p>
+                    
+                    <div class="btn-group" role="group">
+
+                        <button (click) = "decremento(item)" type="button" class="btn-i btn-decremento">
+                            -
+                        </button>
+                        <button  type="button" class=" btn-cantidad btn-i">
+                            {{item.cantidadV}}
+                        </button>
+                        <button (click) = "incremento(item)" type="button" class="btn-i btn-incremento">
+                            +
+                        </button>
+                    </div>
+                    <button type="button" class="btn btn-primary" mdbRipple>
+                        <i class="carrito bi bi-cart4"></i>AGREGAR
+                    </button>   
+              </div>
+            </div>
+      </div>
+    </div>
+</div>

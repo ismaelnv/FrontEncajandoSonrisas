@@ -1,7 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
 import { IProducto } from 'src/app/Modelo/producto.modelo';
-import { ProductoService } from 'src/app/Service/producto.service';
 
 @Component({
   selector: 'app-list-cards',

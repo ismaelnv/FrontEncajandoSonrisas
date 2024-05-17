@@ -12,7 +12,13 @@ export class CategoriasService {
 
   constructor(private _httpclient: HttpClient) { }
 
-  obtenerCategorias():Observable<ITipoProducto[]>{
+  public obtenerCategorias():Observable<ITipoProducto[]>{
     return this._httpclient.get<ITipoProducto[]>(`${this.baseUrl}/tipo_productos`);
+  }
+
+  public obtenerProductosPorIdCategoria(idTP: number):Observable<ITipoProducto>{
+
+    return this._httpclient.get<ITipoProducto>(`${this.baseUrl}/tipo_productos/${idTP}/productos`);
+
   }
 }

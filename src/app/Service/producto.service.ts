@@ -12,6 +12,10 @@ export class ProductoService {
 
   idProSubject = new Subject<number>(); // Sujeto para emitir IDs
   idOProbservable$: Observable<number> = this.idProSubject.asObservable();
+
+  private dataSubject = new Subject<any>();
+  productoCantidad$:Observable<any> = this.dataSubject.asObservable();
+
   
   constructor(private _httpclient: HttpClient) { }
 
@@ -27,11 +31,9 @@ export class ProductoService {
     return this._httpclient.get<IProducto>(`${this.baseUrl}/productos/${id}`);
   }
 
-  public obtenerId(idProducto:number){
+  obtenerCantidadPorducto(cantidad:number){
 
-    console.log("es el id"+idProducto)
-
-    this.idProSubject.next(idProducto);
+    this.dataSubject.next(cantidad);
   }
 
 }

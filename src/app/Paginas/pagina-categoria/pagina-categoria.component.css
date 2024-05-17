@@ -1,0 +1,48 @@
+.row-container {
+
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row; /* Establece la dirección de los elementos como columnas */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    height: 100%; /* Ocupa toda la altura disponible */
+}
+.opciones{
+    
+    position: absolute;
+    right: 30px;
+    width: 150px;
+    padding-top:10px;
+}
+  
+.row-item {
+
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px; /* Espacio entre cada fila */
+}
+
+.colum1{
+
+    width: 30%; /* Ocupa todo el ancho disponible */
+    border: none;
+}
+
+.colum2{
+
+    width: 100%; /* Ocupa todo el ancho disponible */
+    border: none;
+}
+
+.nombre-categoria{
+
+    padding-top:10px;
+    margin-left: 13px;
+    font-size: 25px;
+}
+
+.contador-productos{
+
+    position: absolute;
+    right: 1190px;
+    padding-top:15px;
+}

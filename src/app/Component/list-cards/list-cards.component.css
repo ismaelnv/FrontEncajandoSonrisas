@@ -19,8 +19,7 @@
     border: none;
     width: 240px;
     height: 370px;
-    overflow: hidden;  
-   
+    overflow: hidden; 
 }
 
 .img-wrapper{
@@ -36,6 +35,7 @@
     font-weight: bold;
     background-color: #00A160;
     color: floralwhite;
+    box-shadow: none;
 }
 
 .btn:hover{
@@ -63,6 +63,6 @@
     position: absolute;
     top: 250px;
     font-size: 15px;
+    color: rgb(84, 87, 87);
     white-space: nowrap; /* Evita que el texto se divida en varias líneas */
-    
 }

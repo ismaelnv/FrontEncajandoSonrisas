@@ -7,10 +7,11 @@ import { CategoriasService } from 'src/app/Service/categorias.service';
   templateUrl: './categoria.component.html',
   styleUrls: ['./categoria.component.css']
 })
+
 export class CategoriaComponent implements OnInit{
 
   listaCategorias:ITipoProducto[] = [];
-
+  
   constructor(private _categoriaService:CategoriasService){}
 
 
@@ -21,9 +22,14 @@ export class CategoriaComponent implements OnInit{
   cargarCategorias(){
 
     this._categoriaService.obtenerCategorias().subscribe((data:ITipoProducto[])=>{
+
       this.listaCategorias = data;
       console.log(this.listaCategorias);
     })
   }
 
+  encodeURLParam(param: string): string {
+    
+    return encodeURIComponent(param);
+  }
 }

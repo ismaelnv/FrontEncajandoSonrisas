@@ -11,7 +11,7 @@
     </div>
     <div class="container lista-categorias">
       <ul class="categorias">
-        <li class="tipo" *ngFor="let cat of listaCategorias" routerLink="categoria" data-bs-dismiss="offcanvas">{{ cat.nombre }}</li>
+        <li class="tipo" *ngFor="let cat of listaCategorias" data-bs-dismiss="offcanvas"><a class="categoria" [routerLink]="['/categoria/', cat.codigoTP, encodeURLParam(cat.nombre)]">{{ cat.nombre }}</a></li>
       </ul>
     </div>
   </div>

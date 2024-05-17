@@ -1,5 +1,22 @@
-<p>pagina-categoria works!</p>
 
+<div class="row-container">
+  <div class="row-item colum1">
+    <h5 class="nombre-categoria">{{nombreCategoria}}</h5>
+  </div>
+  <div class="row-item colum2">
 
+    <label class="contador-productos">Articulos 1-{{cantidadP}} de {{cantidadGlobal}}</label> 
 
+    <div class="opciones">
 
+      <select class="form-select" aria-label="Default select example">
+      <option selected>Relevancia</option>
+      <option value="Nombre producto">Nombre producto</option>
+      <option value="Precio">Precio</option>
+      <option value="Lomas vendidos">Lomas vendidos</option>
+    </select>
+    </div> 
+
+    <app-list-categoria [lista]="productos"/>
+  </div>
+</div>

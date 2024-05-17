@@ -1,0 +1,119 @@
+.producto{
+
+    padding-top: 90px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.img-wrapper img{
+
+    width: 100%;
+}
+
+.row .col{
+
+    margin-bottom: 20px;
+}
+
+.card{
+
+    border: none;
+    width: 240px;
+    height: 370px;
+    overflow: hidden;  
+    box-shadow: none;
+    right: -50px;
+}
+
+.img-wrapper{
+
+    height: 190px; 
+}
+
+.btn{
+   
+    position: absolute;
+    top: 319px;
+    width: 140px;
+    font-weight: bold;
+    background-color: #00A160;
+    color: floralwhite;
+    box-shadow: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 2;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 2;
+    border: none;
+    right: 10px;
+}
+
+.btn-group {
+
+    position: absolute;
+    right: 150px; /* Ajusta este valor según sea necesario */
+    top: 319px;
+    box-shadow: none;
+}
+
+.btn-i{
+
+    font-size: 20px; /* Tamaño de fuente de 24 píxeles */
+    color: rgb(173, 173, 173);
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.btn-cantidad{
+
+    color: black;
+}
+
+.btn-decremento{
+
+    box-shadow: none;
+    border-right-width: 0; /* Quita el borde en el lado derecho */
+    border-top-left-radius: 2;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 2;
+    border-bottom-right-radius: 0;
+}
+
+.carrito{
+
+    margin-right: 7px;
+}
+
+.btn-incremento{
+
+    margin-left: -1px; /* Aplica un margen negativo para ocultar el borde izquierdo */
+}
+
+.btn:hover{
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Aplica una sombra encima del botón */
+    background-color: #169260; /* Cambia el color de fondo con opacidad al pasar el mouse */
+}
+
+.btn:active {
+
+    background-color: #75bda1;
+}
+
+.card-precio{
+
+    position: absolute;
+    top: 270px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.card-nombre{
+
+    position: absolute;
+    top: 250px;
+    font-size: 15px;
+    color: rgb(84, 87, 87);
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
