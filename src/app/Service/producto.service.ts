@@ -10,13 +10,9 @@ export class ProductoService {
 
   private baseUrl = 'http://localhost:8080';
 
-  idProSubject = new Subject<number>(); // Sujeto para emitir IDs
-  idOProbservable$: Observable<number> = this.idProSubject.asObservable();
+  dataSubject = new Subject<any>();
+  productoCantidad$:Observable <any> = this.dataSubject.asObservable();
 
-  private dataSubject = new Subject<any>();
-  productoCantidad$:Observable<any> = this.dataSubject.asObservable();
-
-  
   constructor(private _httpclient: HttpClient) { }
 
   obtenerProductos():Observable<IProducto[]>{
@@ -32,6 +28,8 @@ export class ProductoService {
   }
 
   obtenerCantidadPorducto(cantidad:number){
+
+    console.log("Cantidad 2"+cantidad);
 
     this.dataSubject.next(cantidad);
   }

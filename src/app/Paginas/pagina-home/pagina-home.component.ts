@@ -11,7 +11,7 @@ export class PaginaHomeComponent implements OnInit {
  
 
   productos: IProducto[] = [];
-  cantidadProductos: number = 0;
+  cantidadProductos: number = 10;
 
   public constructor(private _serviceProducto: ProductoService){}
 
@@ -32,6 +32,7 @@ export class PaginaHomeComponent implements OnInit {
 
   setCantidadProducto(cantidad:number){
 
+    console.log("el valor es "+cantidad);
     this._serviceProducto.obtenerCantidadPorducto(cantidad);
   }
 }

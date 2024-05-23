@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentChecked, AfterViewInit, Component, DoCheck, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { IProducto } from 'src/app/Modelo/producto.modelo';
 import { ITipoProducto } from 'src/app/Modelo/tipoProducto.modelo';
 import { CategoriasService } from 'src/app/Service/categorias.service';
@@ -13,35 +14,33 @@ import { ProductoService } from 'src/app/Service/producto.service';
 export class PaginaCategoriaComponent implements OnInit{
 
   cProducto?: ITipoProducto;
+  private routeSub?: Subscription;
   productos: IProducto[] = [];
   categoriaId: string | null = null;
   nombreCategoria: string | null = null;
   cantidadP: number = 0;
   cantidadGlobal: number = 0;
   
-  public constructor(private _categoriaService:CategoriasService, private router: ActivatedRoute,private _serviceProducto: ProductoService){ 
+  public constructor(private _categoriaService:CategoriasService, private router: ActivatedRoute,private _serviceProducto:ProductoService){ 
   } 
 
   ngOnInit(): void {
     
-    this.categoriaId = this.router.snapshot.paramMap.get('idp');
-    const nombre = this.router.snapshot.paramMap.get('nombreC');
+    //setTimeout(() =>{
+    this.routeSub = this.router.params.subscribe(params =>{
 
-    this._serviceProducto.productoCantidad$.subscribe(cantidad =>{
+      this.categoriaId = params['idp'];
 
-      if (cantidad !== null && cantidad !== undefined) {
+      this.obtenerProductosPorIdCProducto(Number(this.categoriaId));
 
-        this.cantidadGlobal = cantidad;
-      }     
+      const nombre = this.router.snapshot.paramMap.get('nombreC');
+
+      if(nombre){
+
+        this.nombreCategoria = decodeURIComponent(nombre)
+      }
     })  
-
-    
-    if(nombre){
-
-      this.nombreCategoria = decodeURIComponent(nombre)
-    }
-
-    this.obtenerProductosPorIdCProducto(Number(this.categoriaId));
+     // },1500)
   }
 
   public obtenerProductosPorIdCProducto(idCT: number){

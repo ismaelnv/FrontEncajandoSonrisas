@@ -4,6 +4,17 @@
   border: none;
   outline: none;
   box-shadow: none;
+  
+}
+
+.listC{
+  
+  margin-right: 8px;
+}
+
+.flecha{
+
+  float: right;
 }
   
 .btnCategorias:hover{
@@ -76,6 +87,7 @@
 .categoria{
 
   text-decoration: none; /* Quita el subrayado */
+  font-size: 0.90rem;
   color: white;
 }
   

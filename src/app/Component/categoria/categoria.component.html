@@ -1,4 +1,5 @@
-<button class="btn btnCategorias" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">CATEGORIAS</button>
+<button class="btn btnCategorias" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+  <i class="listC bi bi-list"></i>CATEGORIAS</button>
 
 <div class="offcanvas offcanvas-start principal" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
   <div class="offcanvas-header">
@@ -11,7 +12,9 @@
     </div>
     <div class="container lista-categorias">
       <ul class="categorias">
-        <li class="tipo" *ngFor="let cat of listaCategorias" data-bs-dismiss="offcanvas"><a class="categoria" [routerLink]="['/categoria/', cat.codigoTP, encodeURLParam(cat.nombre)]">{{ cat.nombre }}</a></li>
+        <li class="tipo" *ngFor="let cat of listaCategorias" data-bs-dismiss="offcanvas"><a class="categoria" [routerLink]="['/categoria/', cat.codigoTP, encodeURLParam(cat.nombre)]">
+          {{ cat.nombre | uppercase }} 
+          <i class=" flecha bi bi-chevron-right"></i></a></li>
       </ul>
     </div>
   </div>
