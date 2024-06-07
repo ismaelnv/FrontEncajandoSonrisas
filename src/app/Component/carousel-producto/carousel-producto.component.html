@@ -1,0 +1,31 @@
+
+<div *ngIf="imagenes && imagenes.length > 0" class="carousel-container">
+    <img *ngFor = "let imagen of imagenes; let i=index"
+        
+     [src]="rutaStatica + imagen.nombre" [alt] ="imagen.codigoImagen"
+     [ngClass]="{'image-active': selectedIndex === i}"
+     
+    >
+
+    <div *ngIf="indicators" class="carousel-dot-container">
+        <span *ngFor="let dot of imagenes; let i = index"
+            class="dot"
+            [ngClass]="{'active': selectedIndex === i}"
+            (click) = "selectImage(i)">
+        </span>
+    </div>
+
+    <button *ngIf="controls" class="btn-carousel btn-prev">
+
+        <i class="fas fa-arrow-circle-left icon-carousel bi bi-chevron-compact-left"
+            (click)="onPrevClick()">
+        </i>
+    </button>
+
+    <button *ngIf="controls" class="btn-carousel btn-next">
+
+        <i class="fas fa-arrow-circle-right icon-carousel bi bi-chevron-compact-right"
+            (click)="onNextClick()">
+        </i>
+    </button>
+</div>

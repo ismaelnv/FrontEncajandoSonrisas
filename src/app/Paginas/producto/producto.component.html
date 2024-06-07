@@ -5,8 +5,10 @@
     <div class="card-body">
 
       <div class="row">
-        <div class="col img" *ngFor="let imagen of imagenes">
-          <img [src]="rutaStatica + imagen.nombre" alt="...">
+
+        <div class="col img">
+          
+          <app-carousel-producto [imagenes]="imagenes"></app-carousel-producto>
         </div>
         
         <div class="col description">

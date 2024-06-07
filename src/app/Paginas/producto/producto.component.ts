@@ -4,6 +4,11 @@ import { IImagen } from 'src/app/Modelo/imagen.modelo';
 import { IProducto } from 'src/app/Modelo/producto.modelo';
 import { ProductoService } from 'src/app/Service/producto.service';
 
+export interface ImageP{
+  codigoImagen: number
+  nombre:String;
+}
+
 @Component({
   selector: 'app-producto',
   templateUrl: './producto.component.html',
@@ -13,7 +18,7 @@ export class ProductoComponent implements OnInit {
 
   @Input()
   producto?: IProducto;
-  imagenes?: IImagen[];
+  imagenes: IImagen[] = [];
   id?:number;
   rutaStatica: string = "http://localhost:8080/imagenes/";
   cantidadP: number = 1;
