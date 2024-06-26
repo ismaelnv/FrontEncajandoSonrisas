@@ -21,12 +21,14 @@ export class PaginaCategoriaComponent implements OnInit{
   cantidadP: number = 0;
   cantidadGlobal: number = 0;
   
-  public constructor(private _categoriaService:CategoriasService, private router: ActivatedRoute,private _serviceProducto:ProductoService){ 
-  } 
+  public constructor(
+    private _categoriaService:CategoriasService, 
+    private router: ActivatedRoute,
+    private _serviceProducto:ProductoService)
+  {} 
 
   ngOnInit(): void {
     
-    //setTimeout(() =>{
     this.routeSub = this.router.params.subscribe(params =>{
 
       this.categoriaId = params['idp'];
@@ -40,7 +42,6 @@ export class PaginaCategoriaComponent implements OnInit{
         this.nombreCategoria = decodeURIComponent(nombre)
       }
     })  
-     // },1500)
   }
 
   public obtenerProductosPorIdCProducto(idCT: number){

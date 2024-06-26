@@ -8,7 +8,7 @@ import { IProducto } from '../Modelo/producto.modelo';
 })
 export class ProductoService {
 
-  private baseUrl = 'http://localhost:8080';
+  private baseUrl = "http://localhost:8080/productos";
 
   dataSubject = new Subject<any>();
   productoCantidad$:Observable <any> = this.dataSubject.asObservable();
@@ -16,15 +16,17 @@ export class ProductoService {
   constructor(private _httpclient: HttpClient) { }
 
   obtenerProductos():Observable<IProducto[]>{
-    return this._httpclient.get<IProducto[]>(`${this.baseUrl}/productos`);
+
+    return this._httpclient.get<IProducto[]>(this.baseUrl);
   }
 
   obtenerProductoId(id:number):Observable<IProducto>{
-    
-    var ruta = `${this.baseUrl}/productos/${id}`;
-    console.log("ruta"+ruta);
 
-    return this._httpclient.get<IProducto>(`${this.baseUrl}/productos/${id}`);
+    if (isNaN(id)) {
+      throw new Error('El ID del producto no es un número válido');
+    }
+    
+    return this._httpclient.get<IProducto>(`${this.baseUrl}/${id}`);
   }
 
   obtenerCantidadPorducto(cantidad:number){

@@ -20,7 +20,6 @@ export class ProductoComponent implements OnInit {
   producto?: IProducto;
   imagenes: IImagen[] = [];
   id?:number;
-  rutaStatica: string = "http://localhost:8080/imagenes/";
   cantidadP: number = 1;
   productId: string | null = null;
 

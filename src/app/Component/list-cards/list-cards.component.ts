@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { IProducto } from 'src/app/Modelo/producto.modelo';
 
 @Component({
@@ -6,10 +6,8 @@ import { IProducto } from 'src/app/Modelo/producto.modelo';
   templateUrl: './list-cards.component.html',
   styleUrls: ['./list-cards.component.css']
 })
-export class ListCardsComponent {
-
+export class ListCardsComponent  {
+  
   @Input()
   lista: IProducto[] = [];
-  rutaStatica: string = "http://localhost:8080/imagenes/";
-
 }

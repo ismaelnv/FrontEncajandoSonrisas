@@ -18,7 +18,7 @@ export class CategoriasService {
 
   public obtenerProductosPorIdCategoria(idTP: number):Observable<ITipoProducto>{
 
-    return this._httpclient.get<ITipoProducto>(`${this.baseUrl}/tipo_productos/${idTP}/productos`);
+    return this._httpclient.get<ITipoProducto>(`${this.baseUrl}/tipo_productos/${idTP}`);
 
   }
 }

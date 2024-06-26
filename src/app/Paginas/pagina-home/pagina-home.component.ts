@@ -26,17 +26,6 @@ export class PaginaHomeComponent implements OnInit {
     
       this.productos = data;
       this.cantidadProductos = data.length;
-
-    // for (let index = 0; index < this.productos.length; index++) {
-
-    //   var imagenes = this.productos[index].imagenes;
-      
-    //   for (let i = 0; index < imagenes.length; index++) {
-        
-    //     console.log("datos"+ imagenes[i].nombre);
-    //   } 
-    // }
-      
       this.setCantidadProducto(this.cantidadProductos);
     })
   }

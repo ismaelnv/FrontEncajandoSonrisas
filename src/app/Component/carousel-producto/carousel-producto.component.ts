@@ -6,19 +6,13 @@ import { IImagen } from 'src/app/Modelo/imagen.modelo';
   templateUrl: './carousel-producto.component.html',
   styleUrls: ['./carousel-producto.component.css']
 })
-export class CarouselProductoComponent implements OnInit {
+export class CarouselProductoComponent{
  
   @Input() imagenes: IImagen[] = [];
   @Input() indicators = true;
   controls = true;
 
   selectedIndex = 0;
-  rutaStatica: string = "http://localhost:8080/imagenes/";
-
-  ngOnInit(): void {
-
-    throw new Error('Method not implemented.');
-  }
 
   public selectImage(index:number): void{
 

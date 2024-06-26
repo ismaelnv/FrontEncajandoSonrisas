@@ -3,7 +3,7 @@ import { IImagen } from "./imagen.modelo";
 export interface IProducto {
     
     cod_pro: number;
-	nombre_pro: String ;
+	nombre_pro: String;
 	fecha_cre: Date;
 	fecha_actu: Date ;
 	codigoProducto: number;

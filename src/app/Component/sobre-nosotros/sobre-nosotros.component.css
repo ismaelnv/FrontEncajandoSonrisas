@@ -1,0 +1,75 @@
+
+
+p{
+    font-size: small;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+a{
+    font-size: small;
+    margin-bottom: 0;
+}
+
+.footer{
+
+    color: white;
+    background: #0E1B30;
+}
+
+.libro{
+  
+    width: 40%;
+}   
+
+.tarjetas li{
+    padding: 0px;
+}
+
+.tarjetas{
+    list-style-type: none;
+    display: flex;
+}
+
+i{
+    font-size: 25px;
+    color: white;
+}
+
+img{
+
+    max-width: 350px;
+    width: 80%;
+}
+
+.imagen-tarjetas{
+
+    margin-top: 10px
+}
+
+.tarjetas{
+    list-style-type: none;
+    display: flex;
+}
+
+.redes{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+}
+
+.redes li{
+    padding: 5px;
+}
+
+.enlaces{
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+.para-cliente, .sobre, .reclamaciones{
+    list-style-type: none;
+    padding-left: 0;
+}
+

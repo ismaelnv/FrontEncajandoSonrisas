@@ -13,10 +13,12 @@ export class PersonaService {
   constructor(private _httpclient: HttpClient) { }
 
   obtenerPersonas():Observable<IPersona[]>{
+
     return this._httpclient.get<IPersona[]>(`${this.baseUrl}/personas`);
   }
 
   agregarPersona(datos:any){
+    
     return this._httpclient.post<IPersona>(`${this.baseUrl}/personas`,datos)
   }
 

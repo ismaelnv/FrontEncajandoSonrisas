@@ -10,8 +10,6 @@ export class ListCategoriaComponent{
 
   @Input()
   lista: IProducto[] = [];
- 
-  rutaStatica: string = "http://localhost:8080/imagenes/";
 
   constructor(){
   }

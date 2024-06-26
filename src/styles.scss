@@ -11,3 +11,13 @@
 @import '@fortawesome/fontawesome-free/scss/brands.scss';
  
 @import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+.footer{
+
+    padding: 25px;
+    position: relative;
+    bottom: 0;
+    background-color: #000;
+    width: 100%;
+
+}

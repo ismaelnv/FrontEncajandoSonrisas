@@ -1,4 +1,5 @@
 .saludar{
+
     font-weight: bold;
     font-size: 20px;
     color: #00A160;
@@ -7,12 +8,14 @@
 }
 
 .iniciar{
+
     font-size: 13px;
     color: #00A160;
     cursor: pointer;
 }
 
 .userimg{
+
     font-size: 38px;
     cursor: pointer;
     color: gray;
@@ -20,6 +23,7 @@
 }
 
 .carrito{
+
     font-size: 38px;
     color: #00A160;
     cursor: pointer;
@@ -27,6 +31,7 @@
 }
 
 .navbar {
+
     height: 70px;
     background-color: #dad8d8;
 }
@@ -55,6 +60,7 @@
 }
 
 .buscador form input.busca {
+
     width: 450px;
     height: 35px;
     border-radius: 20px;
@@ -68,10 +74,10 @@
 }
 
 .logear {
+
     display: flex;
     flex-direction: column; /* Apilar los elementos en columna */
-    align-items: center; /* Centrar horizontalmente */
-    
+    align-items: center; /* Centrar horizontalmente */  
 }
 
 .encajando{

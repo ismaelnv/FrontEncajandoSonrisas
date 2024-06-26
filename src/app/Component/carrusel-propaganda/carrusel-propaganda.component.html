@@ -1,17 +1,16 @@
-
-<div *ngIf="imagenes && imagenes.length > 0" class="carousel-container">
-    <img *ngFor = "let imagen of imagenes; let i=index"
+<div *ngIf="propagandas && propagandas.length > 0" class="carousel-container">
+    <img *ngFor = "let propaganda of propagandas; let i=index"
         
-     [src]="imagen.nombre" [alt] ="imagen.codigoImagen"
-     [ngClass]="{'image-active': selectedIndex === i}"
-     
+     [src]="propaganda.url" [alt] ="propaganda.id"
+     [ngClass]="{'propaganda-active': selectedIndex === i}"
+     class="slide"
     >
 
     <div *ngIf="indicators" class="carousel-dot-container">
-        <span *ngFor="let dot of imagenes; let i = index"
+        <span *ngFor="let dot of propagandas; let i = index"
             class="dot"
             [ngClass]="{'active': selectedIndex === i}"
-            (click) = "selectImage(i)">
+            (click) = "selectPropaganda(i)">
         </span>
     </div>
 

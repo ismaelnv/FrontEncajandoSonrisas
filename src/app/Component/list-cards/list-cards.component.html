@@ -3,12 +3,12 @@
       <div class="col" *ngFor="let item of lista">
         <div class="card">
             <div class="img-wrapper">
-                <img [src] ="rutaStatica + item.imagenes[0].nombre" alt="...">
+                <img [src] ="item.imagenes[0].nombre" alt="...">
               </div>
               <div class="card-body">
                 <h5 class="card-nombre">{{item.nombre_pro}}</h5>
                 <p class="card-precio">S/{{item.precio}}</p>
-                <a [routerLink]="['/producto/', item.cod_pro]" class="btn ">Ver Producto
+                <a [routerLink]="['/producto', item.cod_pro]" class="btn ">Ver Producto
                 </a>
               </div>
             </div>

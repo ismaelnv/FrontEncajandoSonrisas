@@ -8,8 +8,7 @@ import { CategoriaComponent } from './Component/categoria/categoria.component';
 import { LoginComponent } from './Dialogs/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { CarouselComponent, CarouselModule } from 'ngx-owl-carousel-o';
-import { CaruselCardsComponent } from './Component/carusel-cards/carusel-cards.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ListCardsComponent } from './Component/list-cards/list-cards.component';
 import { PaginaCategoriaComponent } from './Paginas/pagina-categoria/pagina-categoria.component';
 import { PaginaHomeComponent } from './Paginas/pagina-home/pagina-home.component';
@@ -33,7 +32,8 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { ListCategoriaComponent } from './Component/list-categoria/list-categoria.component';
 import { RegistroComponent } from './Dialogs/registro/registro.component';
 import { CarouselProductoModule } from './Component/carousel-producto/carousel-producto.module';
-
+import { SobreNosotrosComponent } from './Component/sobre-nosotros/sobre-nosotros.component';
+import { CarruselPropagandaComponent } from './Component/carrusel-propaganda/carrusel-propaganda.component';
 
 @NgModule({
   declarations: [
@@ -41,13 +41,14 @@ import { CarouselProductoModule } from './Component/carousel-producto/carousel-p
     BarraDeNavegacionComponent,
     CategoriaComponent,
     LoginComponent,
-    CaruselCardsComponent,
     ListCardsComponent,
     PaginaCategoriaComponent,
     PaginaHomeComponent,
     ProductoComponent,
     ListCategoriaComponent,
-    RegistroComponent
+    RegistroComponent,
+    SobreNosotrosComponent,
+    CarruselPropagandaComponent
   ],
   imports: [
     BrowserModule,
