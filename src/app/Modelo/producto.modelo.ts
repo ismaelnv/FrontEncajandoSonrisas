@@ -1,8 +1,8 @@
 import { IImagen } from "./imagen.modelo";
 
 export interface IProducto {
-    
-    cod_pro: number;
+
+  codpro: number;
 	nombre_pro: String;
 	fecha_cre: Date;
 	fecha_actu: Date ;
@@ -18,5 +18,5 @@ export interface IProducto {
 	edad_recomendada: number;
 	medidas: DoubleRange;
 	cantidadV: number;
-    imagenes:IImagen[];
+  imagenes:IImagen[];
 }

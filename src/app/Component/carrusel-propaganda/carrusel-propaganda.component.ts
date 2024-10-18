@@ -10,15 +10,16 @@ import { IImagen } from 'src/app/Modelo/imagen.modelo';
 export class CarruselPropagandaComponent {
 
   propagandas: Propaganda[]  = [
-        
-    {id: 1, url:"https://i.ibb.co/b17g7Yx/encajando-Portada.jpg" },
-    {id:2, url:"https://i.ibb.co/ZMJKG6g/portada4.jpg" }
-  ]; 
+
+    {id: 1, url:"https://cf.shopee.com.my/file/72053caa33fe3fd90b240a93720c8001" },
+    {id:2, url:"https://www.banpresto.es/wp-content/uploads/2022/03/fg.jpg" },
+    {id:3, url:"https://www.anmosugoi.com/wp-content/uploads/2021/06/anime-portada.jpg" }
+  ];
 
   @Input() indicators = true;
   controls = true;
   @Input() autoSlide = true;
-  @Input() slideInterval = 3000; // cambio de imagen cada 300 segundos
+  @Input() slideInterval = 5000; // cambio de imagen cada 300 segundos
 
   selectedIndex = 0;
   rutaStatica: string = "http://192.168.1.12:8080/imagenes/";
@@ -26,7 +27,7 @@ export class CarruselPropagandaComponent {
   ngOnInit(): void {
 
     if(this.autoSlide){
-      
+
       this.autoSlideImagenes();
     }
   }
@@ -35,7 +36,7 @@ export class CarruselPropagandaComponent {
     setInterval(() =>{
 
       this.onNextClick();
-      
+
     }, this.slideInterval);
   }
 
@@ -56,9 +57,9 @@ export class CarruselPropagandaComponent {
   }
 
   public onNextClick(){
-    
+
     if(this.selectedIndex === this.propagandas.length -1){
-      
+
       this.selectedIndex = 0;
     }else{
 

@@ -8,7 +8,7 @@ import { ProductoService } from 'src/app/Service/producto.service';
   styleUrls: ['./pagina-home.component.css']
 })
 export class PaginaHomeComponent implements OnInit {
- 
+
 
   productos: IProducto[] = [];
   cantidadProductos: number = 10;
@@ -16,17 +16,18 @@ export class PaginaHomeComponent implements OnInit {
   public constructor(private _serviceProducto: ProductoService){}
 
   public ngOnInit(): void {
-    
+
     this.obtenerProductos();
   }
 
   public obtenerProductos(){
 
     this._serviceProducto.obtenerProductos().subscribe((data:IProducto[])=>{
-    
+
       this.productos = data;
       this.cantidadProductos = data.length;
       this.setCantidadProducto(this.cantidadProductos);
+
     })
   }
 
